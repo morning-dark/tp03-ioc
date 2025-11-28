@@ -49,3 +49,26 @@ cd tp03-ioc
 3. **Project Construction:** Use Maven to compile the project and generate the WAR file.
 4. **Deployment:** Deploy the generated ```.war``` file (usually in the ```target/``` folder) to your application server (e.g., Tomcat).
 5. **Access:** Access the application via your server's URL (e.g., ```http://localhost:8080/tp03-ioc/```).
+
+## Project Structure
+
+```bash
+tp03-ioc/
+├── pom.xml                                         # Maven configuration file
+└── src/ 
+    ├── main/ 
+    │   ├── java/ 
+    │   │ ├── org/suptech/dao/PersonDao.java 
+    │   │ ├── org/suptech/entities/Person.java 
+    │   │ └── org/suptech/web/HomeController.java 
+    │   ├── resources/ 
+    │   │   └── hibernate.cfg.xml                   # Hibernate configuration 
+    │   └── webapp/ 
+    │       ├── index.jsp
+    │       └── WEB-INF/ 
+    │           ├── spring/spring-context.xml       # Spring IoC configuration 
+    │           └── web.xml 
+    └── test/ 
+        └── java/ 
+            └── HibernateTest.java
+```
